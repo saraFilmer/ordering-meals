@@ -1,0 +1,21 @@
+
+  .working-hours-section {
+    background-color: #fafafa;
+    padding: 30px 0;
+  }
+  
+  .accordion-button {
+    font-size: 1.1rem;
+    color: #007bff;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #e9ecef;
+    color: #007bff;
+  }
+  
+  .accordion-body {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  

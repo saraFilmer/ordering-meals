@@ -1,0 +1,13 @@
+<div class="product-details container">
+    <h2 class="text-center">פרטי המוצר</h2>
+    <div class="product-card">
+      <img src="{{carentS.Pic}}" alt="תמונה" class="product-img">
+      <h3>{{carentS.Name}}</h3>
+      <p><strong>מחיר:</strong> {{carentS.Price | currency:'ILS'}}</p>
+      <p><strong>קטגוריה:</strong> {{carentS.NameCategory}}</p>
+      <p><strong>תאור:</strong> {{carentS.Description}}</p>
+      <button><a routerLink="../../להזמנות"><i class="fa-solid fa-exchange-alt"></i></a></button>
+      <a routerLink="/cart/{{carentS.Id}}"class="btn btn-success">הוסף לסל<i class="fa-regular fa-plus-square"></i></a>
+    </div>
+  </div>
+  

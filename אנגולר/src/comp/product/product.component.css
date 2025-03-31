@@ -1,0 +1,157 @@
+/* .bad{
+    background-color: aqua;
+    color:brown;
+}
+
+ */
+
+/* ------------------------------------------------------------------------------------------------ */
+ /* 
+
+
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.product-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+}
+
+.btn {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-outline-primary {
+  color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.badge {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.animate__pulse {
+  animation: animate__pulse 1.5s infinite;
+}
+
+.animate__animated {
+  animation-duration: 1s;
+} */
+
+/* Button animations */
+/* .btn-info {
+  animation: animate__pulse 2s infinite;
+  font-size: 1.2rem;
+} */
+ /* ------------------------------------------------------------------------------------------------ */
+
+
+ 
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'); */
+
+.product-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  object-fit: contain; /* מציג את כל התמונה */
+  height: 300px; /* גובה קטן יותר */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+}
+
+.btn {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-outline-primary {
+  color: #1a73e8;
+  border-color: #1a73e8;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.badge {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.animate__pulse {
+  animation: animate__pulse 1.5s infinite;
+}
+
+.animate__animated {
+  animation-duration: 1s;
+}
+
+.btn-info {
+  animation: animate__pulse 2s infinite;
+  font-size: 1.2rem;
+}

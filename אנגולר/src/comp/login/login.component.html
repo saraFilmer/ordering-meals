@@ -1,0 +1,57 @@
+     <div class="register-form container">
+            <h2 class="text-center mb-4">הירשם עכשיו!</h2>
+        <form class="was-validated" #myForm="ngForm" (ngSubmit)="save()">
+            <div class="mb-3">  
+                <!-- שם עברית כולל משפחה-->
+                <label for="Name" class="form-label">שם פרטי ומשפחה:</label>
+                <input type="text" class="form-control" id="Name" placeholder="הכנס שם פרטי ומשפחה" name="Name" required
+                    #Name="ngModel" [(ngModel)]="newUser.Name" pattern="[א-ת]+ [א-ת]{2,7}">
+                    <!-- "[A-Z]{1}[a-z]+ [A-Z]?[a-z]{2,7}"> -->
+                @if(Name.invalid &&(Name.touched || Name.dirty))
+                {
+                <p [hidden]="!Name.errors!['required']">שדה חובה</p>
+                <p [hidden]="!Name.errors!['pattern']">שם פרטי ומשפחה בלבד </p>
+                }
+            </div>
+           
+            <div class="mb-3 mt-3">
+                <label for="Amail" class="form-label">מייל:</label>
+                <input type="email" class="form-control" id="Amail"
+                 placeholder="הכנס מייל" name="Amail" required
+                    [(ngModel)]="newUser.Amail" #Amail="ngModel"
+                    pattern="[A-Za-z.0-9]+@(gmail.com|co.il|net)">
+                    @if(Amail.invalid &&(Amail.touched || Amail.dirty))
+                    {
+                    <p >מיל לא תקין</p>
+                    }
+            </div> 
+            <!-- register -->
+           @if(register==true){
+    <div class="mb-3 mt-3"> 
+        <label for="טלפון" class="form-label">טלפון:</label>
+        <input type="text" class="form-control" id="Phon"
+         placeholder="הכנס מספר טלפון" name="Phon" required
+            [(ngModel)]="newUser.Phon" #Phon="ngModel" required
+            pattern="([0-9]{10})">
+            @if(Phon.invalid &&(Phon.touched || Phon.dirty))
+            {
+            <p >טלפון לא תקין</p>
+            }
+      </div>  
+      
+      <div class="mb-3 mt-3">
+        <label for="DateBorn" class="form-label">תאריך לידה:</label>
+        <input type="date"class="form-control" id="DateBorn"required
+         placeholder="הכנס תאריך לידה" name="DateBorn" required
+            [(ngModel)]="newUser.DateBorn" #DateBorn="ngModel" [max]="today">
+           
+            @if(DateBorn.invalid &&(DateBorn.touched || DateBorn.dirty))
+            {
+            <p >תאריך לא תקין</p>
+            }
+      </div> } 
+            <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">שלח</button>
+        </form>
+    </div> 
+     
+    

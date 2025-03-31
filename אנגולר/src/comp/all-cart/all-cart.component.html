@@ -1,0 +1,19 @@
+
+  <div class="container mt-4">
+    <div>
+      <!-- אם אין הזמנות -->
+      @if(allD.length==0)
+      {<h1>אין לך הזמנות במערכת</h1>}
+
+      @else {<h2>סל קניות</h2>
+       @for( p of allD; track p.Id) {
+      <div class="cart-item">
+        <p>כמות פריט: {{p.CountBuy}} | שם מוצר: {{p.NameProduct}} | מחיר: {{p.PriceProduct| currency:'ILS'}} 
+          | תאור: {{p.DescriptionProduct!|list}}</p>
+        <a routerLink="/cart/{{p.Idproduct}}" class="btn btn-warning">שנה</a>
+      </div>
+    }}
+    </div> 
+    @if(allD.length>0){
+    <button (click)="send()"class="btn btn-success mt-3">לגמירת ההזמנה ושליחה לתשלום</button>} 
+  </div>

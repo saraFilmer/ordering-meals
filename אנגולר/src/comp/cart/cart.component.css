@@ -1,0 +1,299 @@
+/* .circle-button { */
+   /*  width: 40px; קביעת רוחב */
+   /* height: 40px;  קביעת גובה */
+ /*   border-radius: 50%;  הפיכת הכפתור לעיגול */
+  /*   border: none; הסרת גבול */
+  /*  background-color: #10f914;  צבע רקע */
+  /*  color: white;  צבע טקסט */
+   /*  font-size: 20px; גודל גופן */
+  /*  cursor: pointer;  שינוי הסמן */
+  /*  display: flex;  שימוש ב-flexbox */
+  /*  align-items: center;  מרכז תוכן אנכית */
+  /*  justify-content: center;  מרכז תוכן אופקית */
+  /* } */
+  
+  /* .circle-button:hover { */
+  /*  background-color: #0056b3;  צבע רקע בעת ריחוף */
+  /* } */
+  
+
+
+
+
+/* -------------------------------------------------------- */
+  /* body {
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    animation: backgroundChange 5s infinite alternate;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+  } */
+  
+  /* אפקט להחלפת צבעים של הרקע */
+  /* @keyframes backgroundChange {
+    0% {
+      background: linear-gradient(135deg, #ff8a00, #e52e71);
+    }
+    50% {
+      background: linear-gradient(135deg, #4CAF50, #FFC107);
+    }
+    100% {
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+    }
+  }
+   */
+  /* מיכל שמכיל את כל האלמנטים */
+  /* .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: bounceIn 1s ease;
+  } */
+  
+  /* אפקט להגדלה של המיכל */
+  /* @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  } */
+  
+  /* כפתור עם אפקט עגול */
+  /* .circle-button {
+    background-color: #ffcb00;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .circle-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  } */
+  
+  /* כותרת */
+  /* .count {
+    font-size: 48px;
+    animation: rotateIn 1s ease;
+  } */
+  
+  /* אפקט לסיבוב הכותרת */
+  /* @keyframes rotateIn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+   */
+  /* כפתור הוסף לסל */
+  /* app-button {
+    background-color: #29b6f6;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  app-button:hover {
+    background-color: #0288d1;
+    transform: scale(1.1);
+  } */
+
+
+
+/* הגדרת הרקע של הדף */
+body {
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  animation: backgroundChange 10s infinite alternate; /* שיניתי את משך האנימציה ל-10 שניות */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+
+}
+
+
+/* אפקט להחלפת צבעים של הרקע */
+@keyframes backgroundChange {
+  0% {
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+  }
+  50% {
+    background: linear-gradient(135deg, #4CAF50, #FFC107);
+  }
+  100% {
+    background: linear-gradient(135deg, #2196F3, #9C27B0);
+  }
+}
+/* .container {
+  animation: backgroundChange 10s infinite;
+} */
+
+/* החלת האפקט על הדיב */
+.background-animation {
+  /* animation: backgroundChange 10s infinite; */
+  height: 100vh; /* גובה הדיב */
+  display: flex; /* מאפשר למרכז את התוכן */
+  justify-content: center; /* מרכז את התוכן אופקית */
+  align-items: center; /* מרכז את התוכן אנכית */
+}
+/*  */
+
+
+
+/* מיכל שמכיל את כל האלמנטים */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* הגובה בין הפריטים */
+  gap: 20px;
+  /* animation: bounceIn 1s ease;
+  animation: backgroundChange 10s infinite; */
+
+  width: 100vw; /* רוחב של 100% מהחלון */
+  height: 100vh; /* גובה של 100% מהחלון */
+  position: fixed; /* או absolute,fixed כדי להבטיח שהוא מתפרס על כל הדף */
+  /* top: 0;
+  left: 0; */
+}
+
+/* אפקט להגדלה של המיכל */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* כפתור עם אפקט עגול */
+.circle-button {
+  background-color: #e5177b;
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle-button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* כותרת */
+.count {
+  font-size: 48px;
+  animation: rotateIn 1s ease;
+}
+
+/* אפקט לסיבוב הכותרת */
+@keyframes rotateIn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* כפתור הוסף לסל */
+app-button {
+  background-color: #f62929;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+app-button:hover {
+  background-color: #5c2104;
+  transform: scale(1.1);
+}
+
+/* כיתוב מעניין ב- CSS */
+.text-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: textAnimation 4s infinite ease-in-out;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffcb00;
+}
+
+@keyframes textAnimation {
+  0% {
+    transform: rotate(0deg);
+    color: #ff8a00;
+  }
+  25% {
+    transform: rotate(10deg);
+    color: #4CAF50;
+  }
+  50% {
+    transform: rotate(-10deg);
+    color: #FFC107;
+  }
+  75% {
+    transform: rotate(5deg);
+    color: #2196F3;
+  }
+  100% {
+    transform: rotate(0deg);
+    color: #ff8a00;
+  }
+}
+
+/* אפקטים נוספים על האלמנטים */
+button, app-button {
+  transition: all 0.3s ease;
+}
+
+button:hover, app-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}

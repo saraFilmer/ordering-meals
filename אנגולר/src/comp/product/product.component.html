@@ -1,0 +1,76 @@
+
+<section class="container py-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    @for(p of allP; track p.Id)
+    {
+      <div class="col mb-4">
+        <div class="card product-card shadow-lg hover-shadow-lg bg-light">
+          <img [src]="p.Pic" class="card-img-top" alt="{{p.Name}}" width="100%" height="300">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">{{p.Name}}</h5>
+            <!-- [ngClass]עיצוב עי  -->
+            <p [ngClass]="p.QuantityInStock!<1 ? 'badge bg-danger' : 'badge bg-success'" class="card-text">
+              {{p.QuantityInStock}} זמינות
+            </p>
+            <div class="d-flex justify-content-center mt-3">
+              <a routerLink="/more/{{p.Id}}" class="btn btn-outline-primary me-2">פרטים נוספים
+                <i class="fa-solid fa-angle-double-right"></i>
+              </a>
+              <a routerLink="/cart/{{p.Id}}" class="btn btn-outline-success">
+                הוסף לסל <i class="fa-regular fa-plus-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+    <!-- אם הזמין סלט אחד -->
+    @if(allD.length>0){
+  <div>
+    <button (click)="choise()" class="btn btn-info py-2 px-4 mb-4 animate__animated animate__pulse">תוספות</button>
+  </div>}
+
+  <div>
+    <!-- אם הזמין סלט אחד -->
+    @if(b==true){
+    <div class="container">
+      <form (ngSubmit)="save()" class="bg-light p-4 rounded shadow-lg">
+        <h3 class="text-center mb-4">סינון מוצרים</h3>
+        <div class="mb-3">
+          <label for="category" class="form-label">קטגוריה:</label>
+          <select name="NameCategory" [(ngModel)]="thisFilter.NameCategory" class="form-select">
+            <!-- //סינונים -->
+            @for(c of allCat; track c)
+            {
+              <option [ngValue]="c.NameCategory">{{c.NameCategory}}</option>
+            }
+            <option [ngValue]="null">איפוס</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="company" class="form-label">חברה:</label>
+          <select name="NameCompany" [(ngModel)]="thisFilter.NameCompany" class="form-select">
+            <!-- מוצרים -->
+            @for(v of allCom; track v)
+            {
+              <option [ngValue]="v.NameCompany">{{v.NameCompany}}</option>
+            }
+            <option [ngValue]="null">איפוס</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">מחיר:</label>
+          <input type="number" class="form-control" id="price" placeholder="הצעת מחיר" name="Price" [(ngModel)]="thisFilter.Price">
+        </div>
+        <div class="text-center">
+          <app-button title="fa-solid fa-sort-down" btnValue="סנן" (fromB)="save()"></app-button>
+        </div>
+      </form>
+    </div>
+    <div class="text-center mt-3">
+      <button class="btn btn-primary" (click)="sortByName()">מיין לפי שם</button>
+      <button class="btn btn-secondary ms-2" (click)="sortByPrice()">מיין לפי מחיר</button>
+    </div>}
+  </div>
+</section>

@@ -1,0 +1,17 @@
+.register-form {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #28a745;
+    font-size: 2rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+  }
+  
